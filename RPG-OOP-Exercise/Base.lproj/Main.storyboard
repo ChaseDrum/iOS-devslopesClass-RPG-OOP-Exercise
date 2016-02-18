@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RPG_OOP_Exercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,158 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="pDu-MO-rhn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start New Game?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1d-lt-kX4">
+                                <rect key="frame" x="150" y="300" width="300" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dp7-Jr-1my">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="175" translatesAutoresizingMaskIntoConstraints="NO" id="zey-yK-Ikl">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rd-Nj-Uo1">
+                                                <rect key="frame" x="0.0" y="0.0" width="213" height="55"/>
+                                                <state key="normal" image="player1attackbtn"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqQ-MT-7sH">
+                                                <rect key="frame" x="388" y="0.0" width="213" height="55"/>
+                                                <state key="normal" image="player2attackbtn"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="4xa-9p-HyJ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FrI-Ob-qpr">
+                                        <rect key="frame" x="0.0" y="55" width="600" height="255"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="67v-jh-reQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="255"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfQ-d4-u81">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="128"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhV-BT-Cot">
+                                                        <rect key="frame" x="0.0" y="128" width="300" height="128"/>
+                                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="oZF-xd-An3">
+                                                <rect key="frame" x="300" y="0.0" width="300" height="255"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLi-fJ-1Oj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="128"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGq-GH-8Fk">
+                                                        <rect key="frame" x="0.0" y="128" width="300" height="128"/>
+                                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="r9A-bw-vhE"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Igx-r4-fti">
+                                        <rect key="frame" x="0.0" y="310" width="600" height="200"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="82G-vf-jdw">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="1dC-xn-Fzm">
+                                                <rect key="frame" x="300" y="0.0" width="300" height="200"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="9SC-V7-Ebj"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="68H-n7-enC">
+                                        <rect key="frame" x="0.0" y="510" width="600" height="90"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="8Q9-09-8TM">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="QQM-Bj-DiS"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Igx-r4-fti" firstAttribute="leading" secondItem="dp7-Jr-1my" secondAttribute="leading" id="3xL-hk-wSN"/>
+                                    <constraint firstItem="zey-yK-Ikl" firstAttribute="leading" secondItem="dp7-Jr-1my" secondAttribute="leading" id="9f1-KF-sd8"/>
+                                    <constraint firstAttribute="trailing" secondItem="zey-yK-Ikl" secondAttribute="trailing" id="DYV-MJ-W9K"/>
+                                    <constraint firstItem="FrI-Ob-qpr" firstAttribute="leading" secondItem="dp7-Jr-1my" secondAttribute="leading" id="NmJ-XY-Epd"/>
+                                    <constraint firstAttribute="trailing" secondItem="FrI-Ob-qpr" secondAttribute="trailing" id="QCZ-ji-rqZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Igx-r4-fti" secondAttribute="trailing" id="TMR-lf-z98"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text-holder" translatesAutoresizingMaskIntoConstraints="NO" id="C4E-D1-Ver">
+                                <rect key="frame" x="61" y="523" width="479" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="65" id="Ywe-9y-qth"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Place Holder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OX6-t3-vus">
+                                <rect key="frame" x="75" y="518" width="450" height="56"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pDu-MO-rhn" secondAttribute="bottom" id="0HQ-8h-otf"/>
+                            <constraint firstItem="OX6-t3-vus" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="75" id="2QG-eH-fZe"/>
+                            <constraint firstAttribute="trailing" secondItem="dp7-Jr-1my" secondAttribute="trailing" id="4m6-KN-Jzg"/>
+                            <constraint firstItem="C4E-D1-Ver" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="61" id="AzO-az-MMV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dp7-Jr-1my" secondAttribute="bottom" id="J9S-OC-ky9"/>
+                            <constraint firstItem="dp7-Jr-1my" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JMS-N5-Sd6"/>
+                            <constraint firstItem="dp7-Jr-1my" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LpW-lU-PyJ"/>
+                            <constraint firstAttribute="trailing" secondItem="OX6-t3-vus" secondAttribute="trailing" constant="75" id="MNj-WO-bjv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OX6-t3-vus" secondAttribute="bottom" constant="26" id="S3T-BQ-5JZ"/>
+                            <constraint firstAttribute="trailing" secondItem="pDu-MO-rhn" secondAttribute="trailing" id="UuQ-mp-n5d"/>
+                            <constraint firstItem="pDu-MO-rhn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Y91-pK-Xh9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C4E-D1-Ver" secondAttribute="bottom" constant="12" id="bB8-lD-UwR"/>
+                            <constraint firstAttribute="trailing" secondItem="C4E-D1-Ver" secondAttribute="trailing" constant="60" id="pcM-Lq-PIj"/>
+                            <constraint firstItem="pDu-MO-rhn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qdK-IF-ddm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="362"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="1024" height="677"/>
+        <image name="enemy" width="241" height="348"/>
+        <image name="ground" width="1024" height="106"/>
+        <image name="player" width="406" height="441"/>
+        <image name="player1attackbtn" width="212" height="78"/>
+        <image name="player2attackbtn" width="212" height="78"/>
+        <image name="text-holder" width="696" height="106"/>
+    </resources>
 </document>
