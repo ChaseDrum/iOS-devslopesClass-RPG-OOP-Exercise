@@ -1,8 +1,8 @@
 //
 //  Player.swift
-//  RPG-OOP
+//  RPG-OOP-Exercise
 //
-//  Created by Chase Drum on 2/16/16.
+//  Created by Chase Drum on 2/18/16.
 //  Copyright © 2016 Chase Drum. All rights reserved.
 //
 
@@ -17,21 +17,9 @@ class Player:Character {
         }
     }
     
-    private var _inventory = [String]()
-    
-    var inventory: [String] {
-        return _inventory
-    }
-    
-    func addItemToInventory(item: String) {
-        _inventory.append(item)
-    }
-    
-    
-    convenience init(name:String, hp:Int, attackPwr: Int) {
-        self.init (startingHp: hp, attackPwr: attackPwr)
-        // self.init above instead of referring to type like int or string, but this init is pulling from the Character class.
+    //Initializer
+    convenience init(name:String, hp: Int, attackPwr: Int) {
+        self.init (startingHp: hp, attackPwr:attackPwr)
         _name = name
     }
-    
 }

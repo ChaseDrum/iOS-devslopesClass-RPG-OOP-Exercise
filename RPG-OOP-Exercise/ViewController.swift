@@ -7,32 +7,49 @@
 //
 
 import UIKit
-import AVFoundation
+
 
 class ViewController: UIViewController {
-    // Variables below from http://www.raywenderlich.com/114298/learn-to-code-ios-apps-with-swift-tutorial-5-making-it-beautiful on importing of code files
+   
+    @IBOutlet weak var player1Title: UILabel!
+    @IBOutlet weak var player1HealthLbl: UILabel!
+    @IBOutlet weak var player1Image: UIImageView!
     
-    var attackSoundEffect : AVAudioPlayer?
-    //var secondBeep : AVAudioPlayer?
-    var backgroundMusic : AVAudioPlayer?
+    @IBOutlet weak var player2Title: UILabel!
+    @IBOutlet weak var player2HealthLbl: UILabel!
+    @IBOutlet weak var player2Image: UIImageView!
     
+    @IBOutlet weak var gameTextBox: UILabel!
+    
+    
+    var player1: Player!
+    var player2: Player!
+    var textBox: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        player1 = Player(name: "Noobasaurus", hp: 350, attackPwr: 25)
+        player1HealthLbl.text = "\(player1.hp) HP"
+        
+        player2 = Player(name: "SkierDude12345", hp: 2000, attackPwr: 300)
+        player2HealthLbl.text = "\(player2.hp) HP"
         
         
-        
-        
-//        let soundFilePath = NSBundle.mainBundle().pathForResource("BGMusic", ofType: "BGMusic")
-//        let soundFileURL = NSURL(fileURLWithPath: soundFilePath!)
-//        let musicPlayer = AVAudioPlayer(contentsOfURL: soundFileURL, fileTypeHint: nil)
-//        //replaced "error" with "fileTypeHint"
-//        musicPlayer.numberOfLoops = -1 //infinite
-//        musicPlayer.play()
     }
 
-    
+    @IBAction func player1AtkBtnTpd(sender: AnyObject) {
+        
+    }
+
+    @IBAction func player2AtkBtnTpd(sender: AnyObject) {
+        
+    }
+
+
+
+
+
+
 
 }
-
